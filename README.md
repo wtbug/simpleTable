@@ -22,17 +22,18 @@ a function call to initialise the table.
 ###JSON File:###
     {"data": [{"a":"NameA"},{"b":"NameB"}]}
 ###HTML:###
-    ```
+```
     <table id="myTable"></table>
-    ```
+```
 ###JavaScript:###
-    ```
+```
     var table = simpleTable.quickDraw('myTable');
     simpleTable.reDraw(table,'json.txt');
-    ```
+```
     
 ## 2.DOM Example ##
 ###HTML###
+```
     <table id="myTable">
         <thead>
             <tr>
@@ -57,7 +58,8 @@ a function call to initialise the table.
             </tr>
         </tfoot>
     </table>
+```
 ###JavaScript:###
-    ```
+```
     simpleTable.quickDraw('myTable');
-    ```
+```
