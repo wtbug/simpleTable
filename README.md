@@ -13,8 +13,8 @@ a function call to initialise the table.
     simpleTable.quickDraw('myTable');
 </script>
 
-# Data Source
-## 1.JSON Example
+# Data Source #
+## 1.JSON Example ##
 JSON File:
     {"data": [{"a":"NameA"},{"b":"NameB"}]}
 HTML:
@@ -23,7 +23,7 @@ JavaScript:
     var table = simpleTable.quickDraw('myTable');
     simpleTable.reDraw(table,'json.txt');
     
-## 2.DOM Example
+## 2.DOM Example ##
 HTML
     <table id="myTable">
         <thead>
@@ -52,4 +52,3 @@ HTML
     
 JavaScript:
     simpleTable.quickDraw('myTable');
-    
