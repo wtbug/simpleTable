@@ -113,9 +113,9 @@ var simpleTable = {
 
         /* -- Begin Draw -- */
         table.refresh(table)
-        /* add .table-wapper */
+        /* add .simpleTable_wrapper */
         var wapper = document.createElement('div');
-        wapper.className = 'simpleTable_wapper';
+        wapper.className = 'simpleTable_wrapper';
         wapper.appendChild(table.obj.cloneNode(true));
         table.obj.parentNode.replaceChild(wapper, table.obj);
         table.obj = wapper;
@@ -149,7 +149,10 @@ var simpleTable = {
         var _url = url || '';
         var _data = sendData || '';
         if(_url != ''){
-            table.load.style.display='block';
+            if (table.tbody.getElementsByTagName('tr').length > 0)
+                table.load.style.display='none';
+            else
+                table.load.style.display='block';
             ajax('get', _url, _data,
             function(data) {
                 table.tbody = table.drawTbody(JSON.parse(data));
